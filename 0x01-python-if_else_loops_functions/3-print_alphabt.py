@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for a in "abcdefghijklmnopqrstuvwxyz":
-    if a not in "qe":
-        print(a, end="")
+for i in 'abcdefghijklmnopqrstuvwxyz':
+    if (i != "q" and i != "e"):
+        print("{}".format(i), end="")
