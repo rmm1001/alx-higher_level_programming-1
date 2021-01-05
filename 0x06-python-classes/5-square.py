@@ -3,9 +3,6 @@
 This module defines a Square class
 
 Its implements value and type checks for its attributes
-Attributes:
-    area
-    my_print
 """
 
 
