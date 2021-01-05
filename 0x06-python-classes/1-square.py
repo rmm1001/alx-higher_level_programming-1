@@ -5,7 +5,7 @@ This module defines a Square class and initialise its size
 
 
 class Square:
-    """This class is a squeleton for a class Square with an init function
+    """Square implementation
     """
     def __init__(self, size):
         self.__size = size

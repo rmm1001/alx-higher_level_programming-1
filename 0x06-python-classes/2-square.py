@@ -2,14 +2,12 @@
 """
 This module defines a Square class
 
-size must be an integer, otherwise raise a TypeError exception with the message size must be an integer
-
-if size is less than 0, raise a ValueError exception with the message size must be >= 0
+Its implements value and type checks for its attributes
 """
 
 
 class Square:
-    """This class is a class for a square model
+    """Square implementation
     """
     def __init__(self, size=0):
         self.__size = size

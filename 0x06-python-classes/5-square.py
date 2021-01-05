@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+"""
+This module defines a Square class
+
+Its implements value and type checks for its attributes
+Attributes:
+    area
+    my_print
+"""
 
 
 class Square:
@@ -18,9 +26,13 @@ class Square:
         self.__size = size
 
     def area(self):
+        """calculates the square area
+        """
         return (self.__size ** 2)
 
     def my_print(self):
+        """prints a square  with the corresponding size
+        """
         for l in range(self.__size):
             print('#' * self.__size)
         else:
