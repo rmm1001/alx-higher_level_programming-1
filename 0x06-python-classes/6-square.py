@@ -10,7 +10,7 @@ Attributes:
 
 
 class Square:
-    def __init__(self, size=0, position=0):
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
 
@@ -34,16 +34,25 @@ class Square:
     def my_print(self):
         """prints a square  with the corresponding size
         """
-        for l in range(self.__size):
-            print('#' * self.__size)
-        else:
+        if (self.__size == 0):
+            print('')
+        for i in range(self.__position[1]):
             print('')
 
+        for i in range(self.__size):
+            print(' ' * self.__position[0] + '#' * self.__size)
+
     @property
-    def __position(self):
+    def position(self):
         return self.__position
 
-    @__position.setter
-    def _position(self, position):
-        if type(position) == tuple and len(position) == 2 and position:
-            pass
+    @position.setter
+    def position(self, position):
+        if type(position) != tuple or \
+            len(position) != 2 or \
+            not all(isinstance(el, int) for el in position) or \
+                not all(el >= 0 for el in position):
+
+            raise TypeError('position must be a tuple of 2 positive integers')
+
+        self.__position = position
