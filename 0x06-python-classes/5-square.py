@@ -7,6 +7,8 @@ Its implements value and type checks for its attributes
 
 
 class Square:
+    """Square implementation
+    """
     def __init__(self, size=0):
         self.__size = size
 
