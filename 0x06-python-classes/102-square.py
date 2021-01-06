@@ -11,7 +11,7 @@ class Square:
     """
     def __init__(self, size=0):
         self.size = size
-    
+
     def __lt__(self, other):
         return self.__size < other.size
 
