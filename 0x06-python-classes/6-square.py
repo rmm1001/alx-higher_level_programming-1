@@ -13,8 +13,8 @@ class Square:
     """Square implementation
     """
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -36,6 +36,7 @@ class Square:
     def my_print(self):
         """prints a square  with the corresponding size
         """
+        print(self.__position)
         if (self.__size == 0):
             print('')
         for i in range(self.__position[1]):
