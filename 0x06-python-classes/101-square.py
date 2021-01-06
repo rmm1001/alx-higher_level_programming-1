@@ -16,6 +16,20 @@ class Square:
         self.size = size
         self.position = position
 
+    def __str__(self):
+
+        txt = ''
+        if (self.__size == 0):
+            pass
+        else:
+            for i in range(self.position[1]):
+                txt += '\n'
+
+            for i in range(self.size):
+                txt += ' ' * self.position[0] + '#' * self.size
+
+        return txt
+
     @property
     def size(self):
         return self.__size
@@ -36,14 +50,7 @@ class Square:
     def my_print(self):
         """prints a square  with the corresponding size
         """
-        if (self.__size == 0):
-            print('')
-        else:
-            for i in range(self.position[1]):
-                print('')
-
-            for i in range(self.size):
-                print(' ' * self.position[0] + '#' * self.size)
+        print(self.__str__())
 
     @property
     def position(self):
