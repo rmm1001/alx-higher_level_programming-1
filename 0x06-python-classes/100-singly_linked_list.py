@@ -56,7 +56,7 @@ class SinglyLinkedList:
                 newNode = Node(value, current)
                 previous.next_node = newNode
 
-    def __str__(self):
+    def __repr__(self):
         node = self.__head
         txt = ''
         while 1:
