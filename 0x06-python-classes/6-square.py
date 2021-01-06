@@ -31,19 +31,19 @@ class Square:
     def area(self):
         """calculates the square area
         """
-        return (self.__size ** 2)
+        return (self.size ** 2)
 
     def my_print(self):
         """prints a square  with the corresponding size
         """
-        print(self.__position)
+        print(self.position)
         if (self.__size == 0):
             print('')
-        for i in range(self.__position[1]):
+        for i in range(self.position[1]):
             print('')
 
-        for i in range(self.__size):
-            print(' ' * self.__position[0] + '#' * self.__size)
+        for i in range(self.size):
+            print(' ' * self.position[0] + '#' * self.size)
 
     @property
     def position(self):
