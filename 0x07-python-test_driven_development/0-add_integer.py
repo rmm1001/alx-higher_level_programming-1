@@ -7,6 +7,18 @@ The function returns the sum of a and b
 
 
 def add_integer(a, b=98):
+    """adds a and b
+
+    Args:
+        a (int): term 1
+        b (int, optional): term 2. Defaults to 98.
+
+    Raises:
+        TypeError: a and b must be integer
+
+    Returns:
+        int: sum of a and b
+    """
 
     values = []
     for x, param in [(a, 'a'), (b, 'b')]:

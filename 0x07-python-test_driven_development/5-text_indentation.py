@@ -8,9 +8,14 @@ these characters: ., ? and :
 
 
 def text_indentation(text):
+    """adds paragraph after `.`, `:` and `?`
+
+    Args:
+        text (str)
+    """
 
     for l in '.:?':
-        text = text.replace(l, '\n')
+        text = text.replace(l, '{}\n'.format(l))
 
     for line in text.splitlines():
         print(line.strip())
