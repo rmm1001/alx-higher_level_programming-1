@@ -10,7 +10,9 @@ First import ``print_square`` from the ``Print Square`` module:
 
 Now use it:
 
-    >>> text_indentation('abc.def')
+    >>> text_indentation('abc.def?abc:def')
+    abc
+    def
     abc
     def
 

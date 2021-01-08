@@ -17,8 +17,10 @@ def matrix_divided(matrix, div):
 
         for element_index, element in enumerate(line):
             if not isinstance(element, (int, float)):
-                raise TypeError('matrix must be a matrix \
-                    (list of lists) of integers/floats')
+                raise TypeError(
+                    'matrix must be a matrix (list of lists)'
+                    ' of integers/floats'
+                )
 
             # will raise `division by zero` if div = 0
             line[element_index] = round(element/div, 2)

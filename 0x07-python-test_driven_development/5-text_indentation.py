@@ -9,7 +9,7 @@ these characters: ., ? and :
 
 def text_indentation(text):
 
-    for l in '.:':
+    for l in '.:?':
         text = text.replace(l, '\n')
 
     for line in text.splitlines():
