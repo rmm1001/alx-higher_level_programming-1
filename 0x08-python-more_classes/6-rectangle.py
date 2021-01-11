@@ -8,12 +8,12 @@ class Rectangle:
     """Retangle object with getter and setters
     """
 
-    instance_created = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        Rectangle.instance_created += 1
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         total = ""
