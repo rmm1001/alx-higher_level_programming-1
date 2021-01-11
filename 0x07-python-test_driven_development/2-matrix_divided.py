@@ -25,8 +25,8 @@ def matrix_divided(matrix, div):
 
     if not isinstance(div, (int, float)):
         raise TypeError('div must be a number')
-    
-    matrix_divided = matrix.copy()
+
+    matrix_divided = [x[:] for x in matrix]
     for line in matrix_divided:
         if len(line) != len(matrix_divided[0]):
             raise TypeError('Each row of the matrix must have the same size')
