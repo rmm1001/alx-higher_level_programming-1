@@ -11,19 +11,66 @@ First import ``print_square`` from the ``Print Square`` module:
 Now use it:
 
     >>> text_indentation('abc.def')
-    abc
+    abc.
+    <BLANKLINE>
     def
 
     >>> text_indentation('abc.       def')
-    abc
+    abc.
+    <BLANKLINE>
     def
 
     >>> text_indentation('abc      .        def.')
-    abc
-    def
+    abc      .
+    <BLANKLINE>
+    def.
     
     >>> text_indentation('abc..def')
-    abc
+    abc.
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    def
+
+    >>> text_indentation('abc:def')
+    abc:
+    <BLANKLINE>
+    def
+
+    >>> text_indentation('abc:       def')
+    abc:
+    <BLANKLINE>
+    def
+
+    >>> text_indentation('abc      :        def.')
+    abc      :
+    <BLANKLINE>
+    def.
+
+    >>> text_indentation('abc:def.')
+    abc:
+    <BLANKLINE>
+    def.
+
+    >>> text_indentation('abc.def?')
+    abc.
+    <BLANKLINE>
+    def?
+
+    >>> text_indentation('abc?       def')
+    abc?
+    <BLANKLINE>
+    def
+
+    >>> text_indentation('abc      ?        def.')
+    abc      ?
+    <BLANKLINE>
+    def.
+
+    >>> text_indentation('abc?.def')
+    abc?
+    <BLANKLINE>
+    .
     <BLANKLINE>
     def
 
