@@ -18,4 +18,4 @@ def text_indentation(text):
         text = text.replace(l, '{}\n'.format(l))
     lines = text.splitlines()
     for index, line in enumerate(lines):
-        print(line.strip(), end = '' if index == len(lines) - 1 else '\n')
+        print(line.strip(), end = '' if index == len(lines) - 1 else '\n\n')

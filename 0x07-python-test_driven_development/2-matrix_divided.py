@@ -6,7 +6,7 @@ The function returns the matrix divided by div
 """
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix: list, div):
     """divide each element of a matrix by div
 
     Args:
@@ -25,8 +25,9 @@ def matrix_divided(matrix, div):
 
     if not isinstance(div, (int, float)):
         raise TypeError('div must be a number')
-
-    for line in matrix:
+    
+    matrix_divided = matrix.copy()
+    for line in matrix_divided:
         if len(line) != len(matrix[0]):
             raise TypeError('Each row of the matrix must have the same size')
 
@@ -39,4 +40,4 @@ def matrix_divided(matrix, div):
 
             line[element_index] = round(element/div, 2)
 
-    return matrix
+    return matrix_divided
