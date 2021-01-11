@@ -13,6 +13,8 @@ def text_indentation(text):
     Args:
         text (str)
     """
+    if not isinstance(text, str):
+        raise TypeError('text must be a string')
 
     for l in '.:?':
         text = text.replace(l, '{}\n'.format(l))
