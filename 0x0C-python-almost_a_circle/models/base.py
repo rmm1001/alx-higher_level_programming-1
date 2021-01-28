@@ -7,6 +7,7 @@ and to avoid duplicating the same code (by extension, same bugs)
 import json
 import turtle
 
+
 class Base:
     """
     implementation
