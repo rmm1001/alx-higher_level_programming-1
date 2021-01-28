@@ -85,12 +85,12 @@ class Base:
         text = []
         if list_objs is not None:
             content += ','.join(list_objs[0].to_dictionary().keys())
-            content+='\n'
+            content += '\n'
             for lst in list_objs:
                 content += ','.join(
                     map(str, lst.to_dictionary().values())
                 )
-                content+='\n'
+                content += '\n'
 
         with open(filename, mode="w", encoding="utf-8") as f:
             return f.write(content)
