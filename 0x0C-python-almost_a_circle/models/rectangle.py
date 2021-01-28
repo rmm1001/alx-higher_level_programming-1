@@ -2,7 +2,6 @@
 """
 This module implements a Rectangle object
 """
-
 from models.base import Base
 
 
