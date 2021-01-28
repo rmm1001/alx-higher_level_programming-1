@@ -10,11 +10,11 @@ class Rectangle(Base):
     """Rectangle implementation
     """
 
-    def __init__(self, width:int, height:int, x=0, y=0, id=None):
+    def __init__(self, width: int, height: int, x=0, y=0, id=None):
         """initialization
         """
         super().__init__(id)
-    
+
         self.width = width
         self.height = height
         self.x = x
@@ -26,7 +26,7 @@ class Rectangle(Base):
         return "[Rectangle] (<{}>) <{}>/<{}> - <{}>/<{}>" \
             .format(self.id, self.x, self.y, self.width, self.height)
 
-    def check_type_value(self, name:str, value:object, greater_equal=False):
+    def check_type_value(self, name:  str, value: object, greater_equal=False):
         """type and value validation
         """
 
@@ -46,7 +46,7 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, width:int):
+    def width(self, width: int):
         """width setter
         """
         self.check_type_value('width', width)
@@ -59,7 +59,7 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, height:int):
+    def height(self, height: int):
         """height setter
         """
         self.check_type_value('height', height)
@@ -72,7 +72,7 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, x:int):
+    def x(self, x: int):
         """x setter
         """
         self.check_type_value('x', x, True)
@@ -85,7 +85,7 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, y:int):
+    def y(self, y: int):
         """y setter
         """
         self.check_type_value('y', y, True)
@@ -119,4 +119,6 @@ class Rectangle(Base):
         """rectangle to dictionary
         """
 
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return {
+            'x': self.x, 'y': self.y, 'id': self.id,
+            'height': self.height, 'width': self.width}

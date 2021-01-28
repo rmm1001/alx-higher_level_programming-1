@@ -8,7 +8,7 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """Square implementation"""
 
-    def __init__(self, size:int, x=0, y=0, id=None):
+    def __init__(self, size: int, x=0, y=0, id=None):
         """initialization
         """
         super().__init__(size, size, x, y, id)
@@ -21,7 +21,7 @@ class Square(Rectangle):
         return self.__size
 
     @size.setter
-    def size(self, value:int):
+    def size(self, value: int):
         """size setter
         """
         self.width = value
