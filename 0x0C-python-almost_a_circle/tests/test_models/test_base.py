@@ -13,6 +13,7 @@ class TestBase(unittest.TestCase):
         base1 = Base()
         base2 = Base()
         self.assertEqual(base1.id, 1)
+        self.assertEqual(base2.id, 2)
 
 
 if __name__ == '__main__':
