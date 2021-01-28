@@ -38,6 +38,16 @@ class Rectangle(Base):
             .format(self.id, self.x, self.y, self.width, self.height)
 
     def check_type_value(self, name, value):
+        """type and value validation
+
+        Args:
+            name (str): value name
+            value (any): value to check
+
+        Raises:
+            TypeError: value must be an integer
+            ValueError: value must be > 0
+        """
 
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
