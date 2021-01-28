@@ -1,19 +1,24 @@
 #!/usr/bin/python3
 """
-This module implements a base model
+This module implements `base` class of all other classes in this project.
+The goal of it is to manage id attribute in all your future classes
+and to avoid duplicating the same code (by extension, same bugs)
 """
 
 
 class Base:
     """
-    This class will be the “base” of all other classes in this project.
-    The goal of it is to manage id attribute in all your future classes
-    and to avoid duplicating the same code (by extension, same bugs)
+    implementation
     """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """initialization
+
+        Args:
+            id (int, optional): object id. Defaults to None.
+        """
         if id is not None:
             self.id = id
         else:
