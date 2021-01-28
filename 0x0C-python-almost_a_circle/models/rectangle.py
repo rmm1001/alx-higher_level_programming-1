@@ -5,6 +5,7 @@ This module implements a base model
 
 from base import Base
 
+
 class Rectangle(Base):
     """
     This class will be the “base” of all other classes in this project.
@@ -19,8 +20,6 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        if id is not None:
-            self.id = id
 
     @property
     def width(self):
@@ -28,6 +27,8 @@ class Rectangle(Base):
 
     @property.setter
     def width(self, width):
+        if not isinstance(width, int):
+            raise TypeError("{} must be an integer".format(width))
         self.__width = width
 
     @property
@@ -37,9 +38,10 @@ class Rectangle(Base):
     @property.setter
     def height(self, height):
         self.__height = height
+
     @property
     def x(self):
-        return  self.__x
+        return self.__x
 
     @property.setter
     def x(self, x):
@@ -47,9 +49,8 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        return  self.__y
+        return self.__y
 
     @property.setter
     def y(self, y):
         self.__y = y
-

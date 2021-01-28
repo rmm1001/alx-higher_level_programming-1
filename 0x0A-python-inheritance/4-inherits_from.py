@@ -7,6 +7,16 @@ from the specified class ; otherwise False.
 
 
 def inherits_from(obj, a_class):
+    """implementation
+
+    Args:
+        obj (Any): object to check
+        a_class (type): type to check against
+
+    Returns:
+        boolean: response
+    """
+
     if (type(obj) != a_class):
         return issubclass(type(obj), a_class)
     return False

@@ -3,6 +3,7 @@
 This module implements a base model
 """
 
+
 class Base:
     """
     This class will be the “base” of all other classes in this project.
@@ -18,4 +19,3 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
