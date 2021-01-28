@@ -6,17 +6,7 @@ from the specified class ; otherwise False.
 """
 
 
-def inherits_from(obj, a_class):
+def inherits_from(obj, a_class) -> bool:
     """implementation
-
-    Args:
-        obj (Any): object to check
-        a_class (type): type to check against
-
-    Returns:
-        boolean: response
     """
-
-    if (type(obj) != a_class):
-        return issubclass(type(obj), a_class)
-    return False
+    return type(obj) != a_class and issubclass(type(obj), a_class)
