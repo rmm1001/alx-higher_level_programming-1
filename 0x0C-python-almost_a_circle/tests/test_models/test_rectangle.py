@@ -10,10 +10,10 @@ class TestRectangle(unittest.TestCase):
     """Define unit test for Rectangle model"""
 
     def test_initialization(self):
-        r1 = Rectangle()
-        r2 = Rectangle()
-        self.assertEqual(r1.id, 1)
-        self.assertEqual(r2.id, 2)
+        r1 = Rectangle(2,5)
+        r2 = Rectangle(1,2)
+        self.assertEqual(r1.id, 3)
+        self.assertEqual(r2.id, 4)
 
 
 if __name__ == '__main__':

@@ -26,14 +26,18 @@ class Rectangle(Base):
         return "[Rectangle] (<{}>) <{}>/<{}> - <{}>/<{}>" \
             .format(self.id, self.x, self.y, self.width, self.height)
 
-    def check_type_value(self, name:str, value:object):
+    def check_type_value(self, name:str, value:object, greater_equal=False):
         """type and value validation
         """
 
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be > 0".format(name))
+        if not greater_equal:
+            if value <= 0:
+                raise ValueError("{} must be > 0".format(name))
+        else:
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(name))
 
     @property
     def width(self) -> int:
@@ -71,7 +75,7 @@ class Rectangle(Base):
     def x(self, x:int):
         """x setter
         """
-        self.check_type_value('x', x)
+        self.check_type_value('x', x, True)
         self.__x = x
 
     @property
@@ -84,7 +88,7 @@ class Rectangle(Base):
     def y(self, y:int):
         """y setter
         """
-        self.check_type_value('y', y)
+        self.check_type_value('y', y, True)
         self.__y = y
 
     def area(self) -> int:
