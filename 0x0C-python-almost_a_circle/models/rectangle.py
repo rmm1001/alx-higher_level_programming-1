@@ -3,7 +3,7 @@
 This module implements a Rectangle object
 """
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -22,11 +22,11 @@ class Rectangle(Base):
             id (int, optional): id. Defaults to None.
         """
         super().__init__(id)
-
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+    
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     def __str__(self):
         """string representation
@@ -37,6 +37,13 @@ class Rectangle(Base):
         return "[Rectangle] (<{}>) <{}>/<{}> - <{}>/<{}>" \
             .format(self.id, self.x, self.y, self.width, self.height)
 
+    def check_type_value(self, name, value):
+
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be > 0".format(name))
+
     @property
     def width(self):
         """width getter
@@ -46,7 +53,7 @@ class Rectangle(Base):
         """
         return self.__width
 
-    @property.setter
+    @width.setter
     def width(self, width):
         """width setter
 
@@ -56,8 +63,7 @@ class Rectangle(Base):
         Raises:
             TypeError: width must be an integer
         """
-        if not isinstance(width, int):
-            raise TypeError("{} must be an integer".format(width))
+        self.check_type_value('width', width)
         self.__width = width
 
     @property
@@ -69,13 +75,14 @@ class Rectangle(Base):
         """
         return self.__height
 
-    @property.setter
+    @height.setter
     def height(self, height):
         """height setter
 
         Args:
             height (int): height
         """
+        self.check_type_value('height', height)
         self.__height = height
 
     @property
@@ -87,13 +94,14 @@ class Rectangle(Base):
         """
         return self.__x
 
-    @property.setter
+    @x.setter
     def x(self, x):
         """x setter
 
         Args:
             x (int): x
         """
+        self.check_type_value('x', x)
         self.__x = x
 
     @property
@@ -105,13 +113,14 @@ class Rectangle(Base):
         """
         return self.__y
 
-    @property.setter
+    @y.setter
     def y(self, y):
         """y setter
 
         Args:
             y (int): y
         """
+        self.check_type_value('y', y)
         self.__y = y
 
     def area(self):
