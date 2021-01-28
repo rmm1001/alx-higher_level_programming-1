@@ -23,7 +23,7 @@ class Rectangle(Base):
     def __str__(self) -> str:
         """string representation
         """
-        return "[Rectangle] (<{}>) <{}>/<{}> - <{}>/<{}>" \
+        return "[Rectangle] ({}) {}/{} - {}/{}" \
             .format(self.id, self.x, self.y, self.width, self.height)
 
     def check_type_value(self, name:  str, value: object, greater_equal=False):
