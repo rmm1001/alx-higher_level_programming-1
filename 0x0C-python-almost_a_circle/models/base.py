@@ -111,5 +111,20 @@ class Base:
         return object_created
 
     @classmethod
-    def draw(list_rectangles, list_squares):
-        pass
+    def draw(cls, list_rectangles, list_squares):
+        window = turtle.Screen()
+        pen = turtle.Pen()
+        for fig in [*list_rectangles, *list_squares]:
+            pen.up()
+            pen.goto(fig.x, fig.y)
+            pen.down()
+            pen.forward(fig.width)
+            pen.right(90)
+            pen.forward(fig.height)
+            pen.right(90)
+            pen.forward(fig.width)
+            pen.right(90)
+            pen.forward(fig.height)
+            pen.right(90)
+
+        window.exitonclick() 
