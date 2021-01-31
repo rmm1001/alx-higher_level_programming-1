@@ -25,4 +25,3 @@ class Student:
         """reload data from json"""
         for (key, value) in json.items():
             setattr(self, key, value)
-        
