@@ -116,7 +116,9 @@ class Base:
         """
         window = turtle.Screen()
         pen = turtle.Pen()
-        for fig in [*list_rectangles, *list_squares]:
+        figures = list_rectangles + list_squares
+
+        for fig in figures:
             pen.up()
             pen.goto(fig.x, fig.y)
             pen.down()
