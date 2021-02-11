@@ -112,6 +112,8 @@ class Base:
 
     @classmethod
     def draw(cls, list_rectangles, list_squares):
+        """draw the figure
+        """
         window = turtle.Screen()
         pen = turtle.Pen()
         for fig in [*list_rectangles, *list_squares]:
