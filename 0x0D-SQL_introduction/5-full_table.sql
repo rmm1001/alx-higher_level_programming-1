@@ -1,4 +1,3 @@
-
 -- Create a table called 'first_table' in db 'hbtn_0c_0'
 -- 'first_table' should have (id INT) and (name VARCHAR(256))
 -- db name will be passed as argument of mysql cmd
