@@ -2,7 +2,7 @@
 class Rectangle {
     constructor(w, h){
         if(w <= 0 || h <= 0|| isNaN(w) || isNaN(h))
-            return
+            return;
         this.width = w;
         this.height = h;
     }
@@ -15,8 +15,8 @@ class Rectangle {
         [this.height, this.width] = [this.width, this.height];
     }
     double() {
-        this.height = this.height*2
-        this.width = this.width*2
+        this.height = this.height*2;
+        this.width = this.width*2;
     }
 }
 
