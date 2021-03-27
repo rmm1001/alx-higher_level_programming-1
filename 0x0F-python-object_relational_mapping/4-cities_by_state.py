@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-# List all cities from the db
-# Username, password, and database name given as user args
-# Can only use execute() once
-# Sort ascending order by cities.id
+"""List all cities from the db
+Username, password, and database name given as user args
+Can only use execute() once
+Sort ascending order by cities.id
+"""
 import sys
 import MySQLdb
 
