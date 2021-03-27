@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-# Write a file that contains class defns of a City and an instance
-# Base = delcarative_base()
-# City class:
-# inherits from Base class, links to MySQL table 'cities',
-# has columns id, name, and state_id
-# Must use SQLAlchemy
+"""City model with SQLAlchemy
+"""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from model_state import State

@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-# Write a file that contains class defns of a State and an instance
-# Base = delcarative_base()
-# State class:
-# inherits from Base class, links to MySQL table 'states',
-# has columns id and name
-# Must use SQLAlchemy
+"""State model with SQLAlchemy
+"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
