@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-# List all State objects from db 'hbtn_0e_6_usa'
-# Script should take 3 args: username, pw, and db name
-# Must use SQLAlchemy
+"""List all State objects from db 'hbtn_0e_6_usa'
+Script should take 3 args: username, pw, and db name
+Must use SQLAlchemy
+"""
 import sys
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
