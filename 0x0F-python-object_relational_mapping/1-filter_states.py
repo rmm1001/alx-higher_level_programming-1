@@ -14,7 +14,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cmd = """SELECT id, name
              FROM states
-             WHERE name LIKE 'N%' COLLATE SQL_Latin1_General_CP1_CS_AS
+             WHERE name LIKE BINARY 'N%'
              ORDER BY id ASC;"""
     cur.execute(cmd)
     nStates = cur.fetchall()
