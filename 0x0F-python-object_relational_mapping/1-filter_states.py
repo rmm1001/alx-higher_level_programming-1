@@ -14,7 +14,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cmd = """SELECT id, name
              FROM states
-             WHERE LOWER(name) LIKE 'n%'
+             WHERE name LIKE 'n%' OR name LIKE 'N%'
              ORDER BY id ASC;"""
     cur.execute(cmd)
     nStates = cur.fetchall()
