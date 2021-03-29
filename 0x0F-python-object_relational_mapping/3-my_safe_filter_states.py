@@ -15,7 +15,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cmd = """SELECT id, name
          FROM states
-         WHERE name=%s COLLATE UTF8_GENERAL_CI
+         WHERE name=%s
          ORDER BY id ASC"""
     cur.execute(cmd, (sys.argv[4],))
     nStates = cur.fetchall()
