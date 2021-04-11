@@ -10,6 +10,7 @@ def find_peak(A):
     """find pick element"""
     if A == []:
         return None
+
     def recursive(A, left=0, right=len(A) - 1):
         """helper recursive function"""
 
