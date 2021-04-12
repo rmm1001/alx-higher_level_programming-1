@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# Use requests package to make a get request to given URL
+"""Use requests package to make a get request to given URL
+"""
 import requests
 
 if __name__ == "__main__":
